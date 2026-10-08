@@ -1,0 +1,15 @@
+{
+  "seed": 19,
+  "threads": 4,
+  "batch_size": 24,
+  "learning_rate": 0.00005,
+  "spatial_epochs": 32,
+  "ema_decay": 0.995,
+  "eval_samples": 256,
+  "eval_batch": 16,
+  "eval_seed": 20261005,
+  "target_fid": 3.11,
+  "spatial": {"cells": 28, "dim": 64, "depth": 4, "heads": 4, "learn_sigma": true},
+  "temporal": {"agents": 12, "horizon": 140, "cells": 28, "dim": 64, "depth": 4, "heads": 4, "learn_sigma": true, "structural_bias": true},
+  "diffusion": {"steps": 100, "vlb_weight": 0.001}
+}

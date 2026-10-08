@@ -1,0 +1,11 @@
+{
+  "scales": {
+    "acceleration_fd": 20.62387567694872,
+    "jerk_fd": 15105.068253701918
+  },
+  "calibration_type": "Fixed optimized highway pilot execution",
+  "target_kcs": 0.88,
+  "anchor_mode": "optimized",
+  "side": "execution",
+  "note": "Fixed scales from the optimized"
+}

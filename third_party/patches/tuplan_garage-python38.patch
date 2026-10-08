@@ -1,0 +1,117 @@
+diff --git a/tuplan_garage/planning/simulation/planner/pdm_planner/utils/pdm_enums.py b/tuplan_garage/planning/simulation/planner/pdm_planner/utils/pdm_enums.py
+index a2ab26c..b6cfaa6 100644
+--- a/tuplan_garage/planning/simulation/planner/pdm_planner/utils/pdm_enums.py
++++ b/tuplan_garage/planning/simulation/planner/pdm_planner/utils/pdm_enums.py
+@@ -1,6 +1,15 @@
+ from enum import IntEnum
+ 
+ 
++class _classproperty:
++    """Python 3.8-compatible class property; index values are unchanged."""
++    def __init__(self, getter):
++        self.getter = getter
++
++    def __get__(self, instance, owner):
++        return self.getter(owner)
++
++
+ class StateIndex:
+     """Index mapping for array representation of ego states."""
+ 
+@@ -27,81 +36,66 @@ class StateIndex:
+         ]
+         return len(valid_attributes)
+ 
+-    @classmethod
+-    @property
++    @_classproperty
+     def X(cls):
+         return cls._X
+ 
+-    @classmethod
+-    @property
++    @_classproperty
+     def Y(cls):
+         return cls._Y
+ 
+-    @classmethod
+-    @property
++    @_classproperty
+     def HEADING(cls):
+         return cls._HEADING
+ 
+-    @classmethod
+-    @property
++    @_classproperty
+     def VELOCITY_X(cls):
+         return cls._VELOCITY_X
+ 
+-    @classmethod
+-    @property
++    @_classproperty
+     def VELOCITY_Y(cls):
+         return cls._VELOCITY_Y
+ 
+-    @classmethod
+-    @property
++    @_classproperty
+     def ACCELERATION_X(cls):
+         return cls._ACCELERATION_X
+ 
+-    @classmethod
+-    @property
++    @_classproperty
+     def ACCELERATION_Y(cls):
+         return cls._ACCELERATION_Y
+ 
+-    @classmethod
+-    @property
++    @_classproperty
+     def STEERING_ANGLE(cls):
+         return cls._STEERING_ANGLE
+ 
+-    @classmethod
+-    @property
++    @_classproperty
+     def STEERING_RATE(cls):
+         return cls._STEERING_RATE
+ 
+-    @classmethod
+-    @property
++    @_classproperty
+     def ANGULAR_VELOCITY(cls):
+         return cls._ANGULAR_VELOCITY
+ 
+-    @classmethod
+-    @property
++    @_classproperty
+     def ANGULAR_ACCELERATION(cls):
+         return cls._ANGULAR_ACCELERATION
+ 
+-    @classmethod
+-    @property
++    @_classproperty
+     def POINT(cls):
+         # assumes X, Y have subsequent indices
+         return slice(cls._X, cls._Y + 1)
+ 
+-    @classmethod
+-    @property
++    @_classproperty
+     def STATE_SE2(cls):
+         # assumes X, Y, HEADING have subsequent indices
+         return slice(cls._X, cls._HEADING + 1)
+ 
+-    @classmethod
+-    @property
++    @_classproperty
+     def VELOCITY_2D(cls):
+         # assumes velocity X, Y have subsequent indices
+         return slice(cls._VELOCITY_X, cls._VELOCITY_Y + 1)
+ 
+-    @classmethod
+-    @property
++    @_classproperty
+     def ACCELERATION_2D(cls):
+         # assumes acceleration X, Y have subsequent indices
+         return slice(cls._ACCELERATION_X, cls._ACCELERATION_Y + 1)

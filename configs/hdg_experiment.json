@@ -1,0 +1,111 @@
+{
+  "map": "data_process/maps/merge.osm",
+  "datasets": {
+    "highway": {
+      "source": "data_process/python/processed_data/Track_dataset_smooth.pth",
+      "output": "outputs/hdg/highway",
+      "kappa": 1.6,
+      "training": {
+        "epochs": 21,
+        "feature_epochs": 100,
+        "seed": 19,
+        "threads": 4,
+        "batch_size": 24,
+        "learning_rate": 0.0003,
+        "ema_decay": 0.995,
+        "eval_batch": 32,
+        "eval_seed": 20261008,
+        "temporal": {
+          "cells": 28,
+          "dim": 64,
+          "depth": 4,
+          "heads": 4,
+          "learn_sigma": true,
+          "structural_bias": true
+        },
+        "diffusion": {
+          "steps": 100,
+          "vlb_weight": 0.001
+        },
+        "evaluation_epochs": [
+          21
+        ],
+        "feature_method": "legacy",
+        "feature_seed": 19,
+        "learning_rate_schedule": {
+          "11": 0.0001,
+          "21": 5e-05
+        }
+      },
+      "closed_loop": {
+        "groups": 10,
+        "batch_size": 8,
+        "execution": 10,
+        "seed": 20261007,
+        "risk_condition": 1.0,
+        "cfg": 1.0,
+        "postprocessing": "optimized",
+        "kcs_scales": {
+          "acceleration_fd": 20.62387567694872,
+          "jerk_fd": 15105.068253701918
+        },
+        "sv_controller": "front_guard",
+        "ego_x_fraction_max": 0.3333333333333333
+      }
+    },
+    "congestion": {
+      "source": "data_process/python/processed_data/Track_dataset_congestion.pth",
+      "output": "outputs/hdg/congestion",
+      "kappa": 6.8,
+      "training": {
+        "epochs": 40,
+        "feature_epochs": 100,
+        "seed": 20261007,
+        "threads": 4,
+        "batch_size": 8,
+        "learning_rate": 5e-05,
+        "ema_decay": 0.995,
+        "eval_batch": 32,
+        "eval_seed": 20261008,
+        "temporal": {
+          "cells": 28,
+          "dim": 64,
+          "depth": 4,
+          "heads": 4,
+          "learn_sigma": true,
+          "structural_bias": true
+        },
+        "diffusion": {
+          "steps": 100,
+          "vlb_weight": 0.001
+        },
+        "evaluation_epochs": [
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          40
+        ],
+        "feature_method": "legacy",
+        "feature_seed": 20261006
+      },
+      "closed_loop": {
+        "groups": 10,
+        "batch_size": 8,
+        "execution": 10,
+        "seed": 20261007,
+        "risk_condition": 1.0,
+        "cfg": 1.0,
+        "postprocessing": "optimized",
+        "kcs_scales": {
+          "acceleration_fd": 20.62387567694872,
+          "jerk_fd": 15105.068253701918
+        },
+        "sv_controller": "congestion_stable",
+        "initialization": "merge_intent"
+      }
+    }
+  }
+}

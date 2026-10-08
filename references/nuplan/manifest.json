@@ -1,0 +1,41 @@
+{
+  "repository": "motional/nuplan-devkit",
+  "commit": "e9241677997dd86bfc0bcd44817ab04fe631405b",
+  "files": [
+    {
+      "path": "LICENSE.txt",
+      "url": "https://raw.githubusercontent.com/motional/nuplan-devkit/e9241677997dd86bfc0bcd44817ab04fe631405b/LICENSE.txt",
+      "sha256": "2f43f04335316ee361ed2b75e5da8e152ac7d832145a44caa111344ef4c6fa73"
+    },
+    {
+      "path": "nuplan/planning/metrics/evaluation_metrics/common/no_ego_at_fault_collisions.py",
+      "url": "https://raw.githubusercontent.com/motional/nuplan-devkit/e9241677997dd86bfc0bcd44817ab04fe631405b/nuplan/planning/metrics/evaluation_metrics/common/no_ego_at_fault_collisions.py",
+      "sha256": "6d1a5a1aef78bc22e3d1bf1fa943bf0a49e20c48d28dc1dd737cee1440f4cb03"
+    },
+    {
+      "path": "nuplan/planning/metrics/evaluation_metrics/common/ego_lane_change.py",
+      "url": "https://raw.githubusercontent.com/motional/nuplan-devkit/e9241677997dd86bfc0bcd44817ab04fe631405b/nuplan/planning/metrics/evaluation_metrics/common/ego_lane_change.py",
+      "sha256": "07c01522d17c1f71d0890a51b1c2b20cf1de07007863c62042a569153f2960cc"
+    },
+    {
+      "path": "nuplan/planning/metrics/utils/collision_utils.py",
+      "url": "https://raw.githubusercontent.com/motional/nuplan-devkit/e9241677997dd86bfc0bcd44817ab04fe631405b/nuplan/planning/metrics/utils/collision_utils.py",
+      "sha256": "99f130d4fa9e1bf9a8444d94050d443478f033402fdeaf69c1f5836b139c8c3a"
+    },
+    {
+      "path": "nuplan/planning/metrics/utils/route_extractor.py",
+      "url": "https://raw.githubusercontent.com/motional/nuplan-devkit/e9241677997dd86bfc0bcd44817ab04fe631405b/nuplan/planning/metrics/utils/route_extractor.py",
+      "sha256": "981e6f1ca04689722f228f7643607bfc4cd5f6d4499029ec2892996bd3f35ad3"
+    },
+    {
+      "path": "nuplan/planning/simulation/observation/idm/utils.py",
+      "url": "https://raw.githubusercontent.com/motional/nuplan-devkit/e9241677997dd86bfc0bcd44817ab04fe631405b/nuplan/planning/simulation/observation/idm/utils.py",
+      "sha256": "f818aebc8637ef5ce5eec82cef8b4992c5620ad57a9013de1c04a78705463fef"
+    },
+    {
+      "path": "nuplan/common/actor_state/oriented_box.py",
+      "url": "https://raw.githubusercontent.com/motional/nuplan-devkit/e9241677997dd86bfc0bcd44817ab04fe631405b/nuplan/common/actor_state/oriented_box.py",
+      "sha256": "f7df804705030ef581f2d6c8ae4026e702454b2759e7e885334e646a1444d009"
+    }
+  ]
+}

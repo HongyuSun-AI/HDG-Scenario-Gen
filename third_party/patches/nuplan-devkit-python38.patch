@@ -1,0 +1,10 @@
+diff --git a/nuplan/common/geometry/compute.py b/nuplan/common/geometry/compute.py
+index 1c2c410..befe991 100644
+--- a/nuplan/common/geometry/compute.py
++++ b/nuplan/common/geometry/compute.py
+@@ -1,3 +1,5 @@
++from __future__ import annotations
++
+ from typing import List, Union
+ 
+ import numpy as np

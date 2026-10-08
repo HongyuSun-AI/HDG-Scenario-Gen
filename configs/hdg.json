@@ -1,0 +1,12 @@
+{
+  "seed": 7,
+  "horizon": 140,
+  "data_limit": 10000,
+  "batch_size": 8,
+  "train_steps": 10000,
+  "feature_steps": 1000,
+  "learning_rate": 0.0001,
+  "spatial": {"cells": 28, "dim": 32, "depth": 4, "heads": 4, "learn_sigma": true},
+  "temporal": {"architecture": "axial", "cells": 28, "dim": 64, "depth": 4, "heads": 4, "learn_sigma": true, "structural_bias": true},
+  "diffusion": {"steps": 200, "vlb_weight": 0.001}
+}
